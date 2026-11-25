@@ -4,7 +4,9 @@ import os
 from pathlib import Path
 
 
-JOKE = "I put a graduation cap on the gravy boat. It majored in pouring decisions."
+SETUP = "I put a graduation cap on the gravy boat."
+PUNCHLINE = "It majored in pouring decisions."
+JOKE = " ".join((SETUP, PUNCHLINE))
 
 if "\n" in JOKE or "\r" in JOKE or len(JOKE) > 200:
     raise ValueError("JOKE must be a single line of at most 200 characters")
